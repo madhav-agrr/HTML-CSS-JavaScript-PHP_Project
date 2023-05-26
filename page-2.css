@@ -1,0 +1,123 @@
+.result-page {
+  position: absolute;
+  top: 42px;
+  left: calc(50% - 158px);
+  font-size: var(--font-size-21xl);
+}
+.all-service-offering,
+.creator-name {
+  position: absolute;
+  top: 159px;
+  left: calc(50% - 231px);
+  font-size: var(--font-size-5xl);
+}
+.all-service-offering {
+  top: 323px;
+  left: calc(50% - 472px);
+}
+.creator-about-me {
+  position: absolute;
+  top: 207px;
+  left: calc(50% - 231px);
+}
+.page-2-child {
+  position: absolute;
+  top: 132px;
+  left: 248px;
+  border-radius: 1000px;
+  background-color: var(--color-white);
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+.price {
+  position: relative;
+}
+.price-parent {
+  top: 382px;
+  left: 248px;
+  color: var(--color-gray-100);
+}
+.group,
+.parent,
+.price-parent {
+  position: absolute;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  width: 423px;
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-19xl) var(--padding-10xl) var(--padding-12xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-14xl);
+}
+.parent {
+  top: 382px;
+  left: 720px;
+  color: var(--color-gray-100);
+}
+.group {
+  top: 573px;
+  left: 248px;
+}
+.container,
+.go-to-back,
+.group {
+  color: var(--color-gray-100);
+}
+.container {
+  position: absolute;
+  top: 573px;
+  left: 720px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  width: 423px;
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-19xl) var(--padding-10xl) var(--padding-12xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-14xl);
+}
+.go-to-back {
+  position: relative;
+  font-size: var(--font-size-base);
+  font-family: var(--font-inter);
+  text-align: left;
+}
+.go-to-back-wrapper {
+  cursor: pointer;
+  border: 0;
+  padding: 5px var(--padding-19xl);
+  background-color: var(--color-white);
+  position: absolute;
+  top: 41px;
+  left: 23px;
+  border-radius: var(--br-9981xl);
+  width: 161px;
+  height: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.page-2 {
+  position: relative;
+  background-color: var(--color-dimgray);
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}

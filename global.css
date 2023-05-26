@@ -1,0 +1,25 @@
+body{
+  margin:0;
+  line-height:normal;
+}
+
+:root{
+  --font-inter:Inter;
+
+  --font-size-5xl:24px;
+  --font-size-base:16px;
+  --font-size-21xl:40px;
+  --font-size-xl:20px;
+
+  --color-dimgray:#694d5e;
+  --color-white:#fff;
+  --color-gray-100:#060606;
+  
+  --gap-14xl: 33px;
+  --padding-10xl: 29px;
+  --padding-19xl: 38px;
+  --padding-12xl: 31px;
+  
+  --br-9981xl: 10000px;
+  --br-3xs: 10px;
+}

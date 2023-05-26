@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./page-2.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="page-2">
+      <b class="result-page">Result Page</b>
+      <b class="creator-name" id="creatorName"></b>
+      <b class="all-service-offering">All Service Offerings</b>
+      <div class="creator-about-me" id="creatorAbout"></div>
+      <div class="page-2-child"></div>
+      <div class="price-parent">
+        <div class="price">Price</div>
+        <div class="price">Service Name</div>
+      </div>
+      <div id="servicesContainer"></div>
+      <button class="go-to-back-wrapper" id="frameButton">
+        <b class="go-to-back">Go to Back</b>
+      </button>
+    </div>
+
+    <script>
+      var frameButton = document.getElementById("frameButton");
+      if (frameButton) {
+        frameButton.addEventListener("click", function (e) {
+          window.location.href = "index.html";
+        });
+      }
+
+      var urlParams = new URLSearchParams(window.location.search);
+      var profileLink = urlParams.get("profileLink");
+
+      fetch("get-topmate-data.php?profileLink=" + encodeURIComponent(profileLink))
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          var creatorNameElement = document.getElementById("creatorName");
+          creatorNameElement.textContent = data.creatorName;
+
+          var creatorAboutElement = document.getElementById("creatorAbout");
+          creatorAboutElement.textContent = data.creatorAbout;
+
+          var servicesContainer = document.getElementById("servicesContainer");
+          data.services.forEach(function (service) {
+            var priceElement = document.createElement("div");
+            priceElement.className = "price";
+            priceElement.textContent = service.price;
+
+            var serviceNameElement = document.createElement("div");
+            serviceNameElement.className = "price";
+            serviceNameElement.textContent = service.serviceName;
+
+            var serviceContainer = document.createElement("div");
+            serviceContainer.className = "container";
+            serviceContainer.appendChild(priceElement);
+            serviceContainer.appendChild(serviceNameElement);
+
+            servicesContainer.appendChild(serviceContainer);
+          });
+        })
+        .catch(function (error) {
+          console.error("Error:", error);
+        });
+    </script>
+  </body>
+</html>
